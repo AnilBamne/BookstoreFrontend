@@ -1,0 +1,68 @@
+<div fxLayoutAlign="center center" fxFlexFill class="layout">
+    <div class="left">
+        <div><img src="../../../assets/images/2766594@2x.png" class="left-image"></div>
+        <div class="right">
+            <div class="btn-content ">
+                <button mat-flat-button class="top-btns" (click)="CheckLogin()">LOGIN</button>
+                <button mat-button class="top-btns" (click)="CheckSignup()">SIGNUP</button>
+                <!-- <mat-button-toggle-group >
+                    <mat-button-toggle class="top-btns" (click)="CheckLogin()">LOGIN</mat-button-toggle>
+                    <mat-button-toggle class="top-btns" (click)="CheckSignup()">SIGNUP</mat-button-toggle>    
+                </mat-button-toggle-group> -->
+            </div>
+            <form *ngIf="condition">
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password">
+                    </mat-form-field>
+                </div>
+                <div class="login-btn">
+                    <button mat-flat-button class="login-btn">LOGIN</button>
+                </div>
+                <div class="or">OR</div>
+                <div class="btn-content">
+                    <button mat-flat-button color="primary">FACEBOOK</button>
+                    <button mat-button>GOOGLE</button>
+                </div>
+            </form>
+            <form *ngIf="!condition">
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput placeholder="Fullname">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mobile No</mat-label>
+                        <input matInput placeholder="Mobile No">
+                    </mat-form-field>
+                </div>
+                <div class="login-btn">
+                    <button mat-flat-button class="login-btn">SIGNUP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
